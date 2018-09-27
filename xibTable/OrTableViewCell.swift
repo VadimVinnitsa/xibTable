@@ -1,5 +1,5 @@
 //
-//  Welcome.swift
+//  OrTableViewCell.swift
 //  xibTable
 //
 //  Created by Admin on 27.09.2018.
@@ -8,12 +8,8 @@
 
 import UIKit
 
-class OnlyLabelTableViewCell: UITableViewCell {
-  
- static let identifier = "WelcomeIdentifier"
-    
-    @IBOutlet weak var label: UILabel!
-    
+class OrTableViewCell: UITableViewCell {
+static let identifier = "OrIdentifier"
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

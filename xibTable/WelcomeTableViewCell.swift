@@ -1,5 +1,5 @@
 //
-//  LoginFacebookTableViewCell.swift
+//  Welcome.swift
 //  xibTable
 //
 //  Created by Admin on 27.09.2018.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class LoginFacebookTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var loginButton: UIButton!
-    static let identifier = "LoginFaceBookIdentifier"
+class WelcomeTableViewCell: UITableViewCell {
+  
+ static let identifier = "WelcomeIdentifier"
     
-    @IBOutlet weak var fLabel: UILabel!
-    
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,12 +23,5 @@ class LoginFacebookTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
     
-    
-    @IBAction func loginPressed(_ sender: UIButton) {
-        print("loginPressed")
-    }
-    
-   
 }

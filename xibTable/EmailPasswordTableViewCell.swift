@@ -8,8 +8,8 @@
 
 import UIKit
 
-class EmailTableViewCell: UITableViewCell {
- static let identifier = "EmailIdentifier"
+class EmailPasswordTableViewCell: UITableViewCell {
+ static let identifier = "EmailPasswordIdentifier"
   
     @IBOutlet weak var imageViewPassword: UIImageView!
     @IBOutlet weak var imageViewEmail: UIImageView!

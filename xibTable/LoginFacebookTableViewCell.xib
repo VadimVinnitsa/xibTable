@@ -38,36 +38,22 @@
                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ev-ob-vop">
-                        <rect key="frame" x="56.5" y="11.5" width="306.5" height="93"/>
-                        <state key="normal" title="Forgotten password?">
-                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </state>
-                        <connections>
-                            <action selector="buttonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8lf-Ei-2FI"/>
-                        </connections>
-                    </button>
                 </subviews>
                 <color key="backgroundColor" red="0.0" green="0.68458825349807739" blue="0.57666832208633423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="3ev-ob-vop" firstAttribute="width" secondItem="m5y-T5-Vdg" secondAttribute="width" id="2Iu-c3-Q99"/>
-                    <constraint firstItem="3ev-ob-vop" firstAttribute="centerX" secondItem="m5y-T5-Vdg" secondAttribute="centerX" id="3m5-yK-beY"/>
                     <constraint firstItem="m5y-T5-Vdg" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="96J-J2-41E"/>
                     <constraint firstItem="m5y-T5-Vdg" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="A8g-t7-G7o"/>
-                    <constraint firstItem="3ev-ob-vop" firstAttribute="centerY" secondItem="m5y-T5-Vdg" secondAttribute="centerY" id="Cyy-wp-ieM"/>
                     <constraint firstItem="g05-i3-qTv" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="E5x-gd-k70"/>
                     <constraint firstItem="g05-i3-qTv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KLJ-Rb-CdN"/>
                     <constraint firstItem="m5y-T5-Vdg" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" constant="-20" id="UZq-ce-mFo"/>
                     <constraint firstItem="g05-i3-qTv" firstAttribute="trailing" secondItem="m5y-T5-Vdg" secondAttribute="leading" id="rcg-pS-UlH"/>
                     <constraint firstItem="m5y-T5-Vdg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="v7E-uB-BUE"/>
-                    <constraint firstItem="3ev-ob-vop" firstAttribute="height" secondItem="m5y-T5-Vdg" secondAttribute="height" id="yWr-F1-6Oo"/>
                     <constraint firstItem="g05-i3-qTv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="zvr-Fs-Twe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="fLabel" destination="g05-i3-qTv" id="Yn2-Cc-Q6m"/>
-                <outlet property="forgottenButton" destination="3ev-ob-vop" id="Lcx-ev-12u"/>
                 <outlet property="loginButton" destination="m5y-T5-Vdg" id="ERC-Rs-FcM"/>
             </connections>
             <point key="canvasLocation" x="-68" y="-25"/>
