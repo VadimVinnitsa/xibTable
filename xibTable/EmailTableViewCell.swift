@@ -10,13 +10,13 @@ import UIKit
 
 class EmailTableViewCell: UITableViewCell {
  static let identifier = "EmailIdentifier"
-   
   
-    @IBOutlet weak var imageV: UIImageView!
+    @IBOutlet weak var imageViewPassword: UIImageView!
+    @IBOutlet weak var imageViewEmail: UIImageView!
     
     @IBOutlet weak var textFieldEmail: UITextField!
-   
     @IBOutlet weak var textFieldLogin: UITextField!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

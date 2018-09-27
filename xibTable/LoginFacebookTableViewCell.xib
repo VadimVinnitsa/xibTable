@@ -13,42 +13,64 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="LoginFacebookTableViewCell" customModule="xibTable" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="116" id="KGk-i7-Jjw" customClass="LoginFacebookTableViewCell" customModule="xibTable" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="383" height="116"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="383" height="115.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5y-T5-Vdg">
-                        <rect key="frame" x="64" y="0.0" width="256" height="44"/>
-                        <color key="backgroundColor" red="0.47960454225540161" green="0.50732362270355225" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="frame" x="56.5" y="11.5" width="306.5" height="92.5"/>
+                        <color key="backgroundColor" red="0.083428509533405304" green="0.5116119384765625" blue="0.57692873477935791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <state key="normal" title="LOGIN WITH FACEBOOK">
                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
+                        <connections>
+                            <action selector="loginPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jHf-t4-ADz"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="f" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g05-i3-qTv">
-                        <rect key="frame" x="0.0" y="0.0" width="64" height="44"/>
-                        <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="frame" x="20" y="11.5" width="36.5" height="92.5"/>
+                        <color key="backgroundColor" red="0.084178321063518524" green="0.50787526369094849" blue="0.57693368196487427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ev-ob-vop">
+                        <rect key="frame" x="56.5" y="11.5" width="306.5" height="93"/>
+                        <state key="normal" title="Forgotten password?">
+                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="buttonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8lf-Ei-2FI"/>
+                        </connections>
+                    </button>
                 </subviews>
+                <color key="backgroundColor" red="0.0" green="0.68458825349807739" blue="0.57666832208633423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
+                    <constraint firstItem="3ev-ob-vop" firstAttribute="width" secondItem="m5y-T5-Vdg" secondAttribute="width" id="2Iu-c3-Q99"/>
+                    <constraint firstItem="3ev-ob-vop" firstAttribute="centerX" secondItem="m5y-T5-Vdg" secondAttribute="centerX" id="3m5-yK-beY"/>
                     <constraint firstItem="m5y-T5-Vdg" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="96J-J2-41E"/>
-                    <constraint firstItem="m5y-T5-Vdg" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="A8g-t7-G7o"/>
-                    <constraint firstItem="g05-i3-qTv" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="E5x-gd-k70"/>
+                    <constraint firstItem="m5y-T5-Vdg" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="A8g-t7-G7o"/>
+                    <constraint firstItem="3ev-ob-vop" firstAttribute="centerY" secondItem="m5y-T5-Vdg" secondAttribute="centerY" id="Cyy-wp-ieM"/>
+                    <constraint firstItem="g05-i3-qTv" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="E5x-gd-k70"/>
                     <constraint firstItem="g05-i3-qTv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KLJ-Rb-CdN"/>
-                    <constraint firstItem="m5y-T5-Vdg" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" id="UZq-ce-mFo"/>
+                    <constraint firstItem="m5y-T5-Vdg" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" constant="-20" id="UZq-ce-mFo"/>
                     <constraint firstItem="g05-i3-qTv" firstAttribute="trailing" secondItem="m5y-T5-Vdg" secondAttribute="leading" id="rcg-pS-UlH"/>
                     <constraint firstItem="m5y-T5-Vdg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="v7E-uB-BUE"/>
-                    <constraint firstItem="g05-i3-qTv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zvr-Fs-Twe"/>
+                    <constraint firstItem="3ev-ob-vop" firstAttribute="height" secondItem="m5y-T5-Vdg" secondAttribute="height" id="yWr-F1-6Oo"/>
+                    <constraint firstItem="g05-i3-qTv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="zvr-Fs-Twe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="-14" y="-4"/>
+            <connections>
+                <outlet property="fLabel" destination="g05-i3-qTv" id="Yn2-Cc-Q6m"/>
+                <outlet property="forgottenButton" destination="3ev-ob-vop" id="Lcx-ev-12u"/>
+                <outlet property="loginButton" destination="m5y-T5-Vdg" id="ERC-Rs-FcM"/>
+            </connections>
+            <point key="canvasLocation" x="-68" y="-25"/>
         </tableViewCell>
     </objects>
 </document>

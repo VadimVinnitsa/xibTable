@@ -21,17 +21,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQT-Mz-4yk">
-                        <rect key="frame" x="16" y="0.0" width="288" height="44"/>
-                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="frame" x="16" y="4.5" width="288" height="35"/>
                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" red="0.0060212532989680767" green="0.9916803240776062" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" red="0.0" green="0.66535067558288574" blue="0.56491082906723022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="iQT-Mz-4yk" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.9" id="8ML-GQ-6Va"/>
-                    <constraint firstItem="iQT-Mz-4yk" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="KH7-h9-6OA"/>
+                    <constraint firstItem="iQT-Mz-4yk" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="KH7-h9-6OA"/>
                     <constraint firstItem="iQT-Mz-4yk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="P6Y-mR-m3W"/>
                     <constraint firstItem="iQT-Mz-4yk" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="kc5-Na-Kxh"/>
                 </constraints>

@@ -10,7 +10,11 @@ import UIKit
 
 class LoginFacebookTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var forgottenButton: UIButton!
     static let identifier = "LoginFaceBookIdentifier"
+    
+    @IBOutlet weak var fLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,5 +26,14 @@ class LoginFacebookTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
     
+    
+    @IBAction func loginPressed(_ sender: UIButton) {
+        print("loginPressed")
+    }
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        print("buttonPressed")
+    }
 }
