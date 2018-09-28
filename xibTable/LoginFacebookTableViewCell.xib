@@ -20,43 +20,33 @@
                 <rect key="frame" x="0.0" y="0.0" width="383" height="115.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5y-T5-Vdg">
-                        <rect key="frame" x="56.5" y="11.5" width="306.5" height="92.5"/>
-                        <color key="backgroundColor" red="0.083428509533405304" green="0.5116119384765625" blue="0.57692873477935791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                        <state key="normal" title="LOGIN WITH FACEBOOK">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5y-T5-Vdg">
+                        <rect key="frame" x="38.5" y="12" width="306" height="92"/>
+                        <color key="backgroundColor" red="0.12214737385511398" green="0.52713519334793091" blue="0.58868652582168579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" image="faceBook">
                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <connections>
                             <action selector="loginPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jHf-t4-ADz"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="f" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g05-i3-qTv">
-                        <rect key="frame" x="20" y="11.5" width="36.5" height="92.5"/>
-                        <color key="backgroundColor" red="0.084178321063518524" green="0.50787526369094849" blue="0.57693368196487427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
-                <color key="backgroundColor" red="0.0" green="0.68458825349807739" blue="0.57666832208633423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" red="0.01049180888" green="0.69621199369999998" blue="0.58055895570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="m5y-T5-Vdg" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="96J-J2-41E"/>
                     <constraint firstItem="m5y-T5-Vdg" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="A8g-t7-G7o"/>
-                    <constraint firstItem="g05-i3-qTv" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="E5x-gd-k70"/>
-                    <constraint firstItem="g05-i3-qTv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KLJ-Rb-CdN"/>
-                    <constraint firstItem="m5y-T5-Vdg" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" constant="-20" id="UZq-ce-mFo"/>
-                    <constraint firstItem="g05-i3-qTv" firstAttribute="trailing" secondItem="m5y-T5-Vdg" secondAttribute="leading" id="rcg-pS-UlH"/>
+                    <constraint firstItem="m5y-T5-Vdg" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="tBP-th-DBA"/>
                     <constraint firstItem="m5y-T5-Vdg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="v7E-uB-BUE"/>
-                    <constraint firstItem="g05-i3-qTv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="zvr-Fs-Twe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="fLabel" destination="g05-i3-qTv" id="Yn2-Cc-Q6m"/>
                 <outlet property="loginButton" destination="m5y-T5-Vdg" id="ERC-Rs-FcM"/>
             </connections>
-            <point key="canvasLocation" x="-68" y="-25"/>
+            <point key="canvasLocation" x="-49" y="-175"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="faceBook" width="542" height="95"/>
+    </resources>
 </document>

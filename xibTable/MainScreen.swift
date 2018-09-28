@@ -13,23 +13,47 @@ class MainScreen: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("did load")
+        setupNavigationItem()
         registerCell()
-       
+        
+        tableView.allowsSelection = false
+        tableView.separatorStyle = .none
     }
     
     
     func registerCell() {
-        let WelcomeNib = UINib(nibName: "WelcomeTableViewCell", bundle: nil)
-        let FaceBookNib = UINib(nibName: "LoginFacebookTableViewCell", bundle: nil)
-        let OrNib = UINib(nibName: "OrTableViewCell", bundle: nil)
-        let emailNib = UINib(nibName: "EmailPasswordTableViewCell", bundle: nil)
-        let forgottenNib = UINib(nibName: "ForgottenTableViewCell", bundle: nil)
+        tableView.register(WelcomeTableViewCell.nib, forCellReuseIdentifier: WelcomeTableViewCell.identifier)
+        tableView.register(LoginFacebookTableViewCell.nib, forCellReuseIdentifier: LoginFacebookTableViewCell.identifier)
+        tableView.register(OrTableViewCell.nib, forCellReuseIdentifier:  OrTableViewCell.identifier)
+        tableView.register(EmailPasswordTableViewCell.nib, forCellReuseIdentifier: EmailPasswordTableViewCell.identifier)
+        tableView.register(ForgottenTableViewCell.nib, forCellReuseIdentifier: ForgottenTableViewCell.identifier)
         
-        tableView.register(WelcomeNib, forCellReuseIdentifier: WelcomeTableViewCell.identifier)
-        tableView.register(FaceBookNib, forCellReuseIdentifier: LoginFacebookTableViewCell.identifier)
-        tableView.register(OrNib, forCellReuseIdentifier:  OrTableViewCell.identifier)
-        tableView.register(emailNib, forCellReuseIdentifier: EmailPasswordTableViewCell.identifier)
-        tableView.register(forgottenNib, forCellReuseIdentifier: ForgottenTableViewCell.identifier)
+    }
+    
+  func setupNavigationItem() {
+  //  self.navigationController?.navigationBar.barStyle = UIBarStyle.blackTranslucent
+    
+    self.navigationController?.navigationBar.barTintColor  = .red
+    //sdfdasfs
+    var d = 10
+    var ddf = 20
+    var df = 555
+        let loginButton = UIButton(type: .system)
+        loginButton.setBackgroundImage(UIImage(named: "login"), for: .normal)
+      loginButton.frame = CGRect(x: 0, y: 0, width: 30, height: 53)
+    
+   //     loginButton.tintColor = UIColor.white
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: loginButton)
+        
+        let backButton = UIButton(type: .system)
+    
+  backButton.setBackgroundImage(UIImage(named: "back"), for: .normal)
+  //  backButton.backgroundColor = .red
+    backButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+    //    backButton.tintColor = UIColor.white
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+    
+    
         
     }
     
@@ -39,6 +63,9 @@ class MainScreen: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 5 {
+            return 300
+        }
         return 90
         
     }

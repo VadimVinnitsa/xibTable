@@ -2,14 +2,23 @@
 //  OrTableViewCell.swift
 //  xibTable
 //
-//  Created by Admin on 27.09.2018.
+//  Created by Admin on 28.09.2018.
 //  Copyright © 2018 Admin. All rights reserved.
 //
 
 import UIKit
 
 class OrTableViewCell: UITableViewCell {
-static let identifier = "OrIdentifier"
+
+    static var nib : UINib {
+        return UINib(nibName: identifier, bundle: nil)
+    }
+    
+    static var identifier : String {
+        return String(describing: self)
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
