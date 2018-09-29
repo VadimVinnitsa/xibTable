@@ -23,6 +23,17 @@ class EmailPasswordTableViewCell: UITableViewCell {
         return String(describing: self)
     }
     
+//    NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+//    NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+//
+    
+    //MARK:- future cods
+//    @objc func keyboardShow() {
+//        print("keyboardShow")
+//    }
+//    @objc func keyboardHide() {
+//        print("keyboardHide")
+//    }
     
     
     override func awakeFromNib() {
@@ -35,5 +46,30 @@ class EmailPasswordTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+ 
+    //  hide keyboard when tapped not textField
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //textField.resignFirstResponder()
+        print("touch onother")
+    }
+    
     
 }
+
+
+extension EmailPasswordTableViewCell: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.resignFirstResponder()
+        print("end editing")
+    }
+    
+    //hide KeyBoard when pressed return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        print("should return")
+        return true
+    }
+    
+}
+

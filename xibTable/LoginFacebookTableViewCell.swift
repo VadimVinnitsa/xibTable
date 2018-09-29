@@ -12,9 +12,6 @@ class LoginFacebookTableViewCell: UITableViewCell {
 
     @IBOutlet weak var loginButton: UIButton!
    
-    
-    @IBOutlet weak var fLabel: UILabel!
-   
     static var nib : UINib {
         return UINib(nibName: identifier, bundle: nil)
     }

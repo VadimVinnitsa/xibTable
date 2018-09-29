@@ -20,6 +20,7 @@ class MainScreen: UITableViewController {
         tableView.separatorStyle = .none
     }
     
+ 
     
     func registerCell() {
         tableView.register(WelcomeTableViewCell.nib, forCellReuseIdentifier: WelcomeTableViewCell.identifier)
@@ -32,21 +33,24 @@ class MainScreen: UITableViewController {
     }
     
     func setupNavigationItem() {
-        self.navigationController?.navigationBar.barTintColor  = #colorLiteral(red: 0, green: 0.6884844303, blue: 0.5805915594, alpha: 1)
+   //     self.navigationController?.navigationBar.barTintColor  = #colorLiteral(red: 0.1221473739, green: 0.5271351933, blue: 0.5886865258, alpha: 1)
+        self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 0.01049180888, green: 0.6962119937, blue: 0.5805589557, alpha: 1)
         
         let loginButton = UIButton(type: .system)
         loginButton.setBackgroundImage(UIImage(named: "login"), for: .normal)
-        loginButton.frame = CGRect(x: 0, y: 0, width: 30, height: 53)
+      //  loginButton.frame = CGRect(x: 0, y: 0, width: 30, height: 100)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: loginButton)
         let backButton = UIButton(type: .system)
         
         backButton.setBackgroundImage(UIImage(named: "back"), for: .normal)
-        backButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+      //  backButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
         
         
         
     }
+    
+
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -68,6 +72,7 @@ class MainScreen: UITableViewController {
         return cell
             
         case 1: let cell = tableView.dequeueReusableCell(withIdentifier: LoginFacebookTableViewCell.identifier, for: indexPath) as! LoginFacebookTableViewCell
+      //  cell.loginButton.setImage(UIImage(named: "faceBook"), for: .normal)
         return cell
             
         case 2: let cell = tableView.dequeueReusableCell(withIdentifier: OrTableViewCell.identifier, for: indexPath) as! OrTableViewCell
@@ -77,16 +82,14 @@ class MainScreen: UITableViewController {
         cell.textFieldLogin.isEnabled = false
         cell.textFieldLogin.isHidden = true
         cell.imageViewPassword.isHidden = true
-        cell.imageViewEmail.layer.cornerRadius = 20
         
-        cell.textFieldEmail.placeholder = "email"
+        cell.textFieldEmail.placeholder = "Email"
         return cell
             
         case 4: let cell = tableView.dequeueReusableCell(withIdentifier: EmailPasswordTableViewCell.identifier, for: indexPath) as! EmailPasswordTableViewCell
         cell.textFieldLogin.isEnabled = true
         cell.textFieldLogin.isHidden = false
         cell.imageViewEmail.isHidden = true
-        cell.imageViewPassword.layer.cornerRadius = 30
         
         cell.textFieldLogin.placeholder = "Password"
         return cell
@@ -100,3 +103,6 @@ class MainScreen: UITableViewController {
     }
     
 }
+
+
+
