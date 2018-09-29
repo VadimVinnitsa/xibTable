@@ -12,15 +12,27 @@ class MainScreen: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("did load")
         setupNavigationItem()
         registerCell()
+  
+        setup()
         
-        tableView.allowsSelection = false
-        tableView.separatorStyle = .none
     }
     
- 
+    func setup() {
+        tableView.allowsSelection = false
+        tableView.separatorStyle = .none
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+    }
+    
+    @objc func keyboardShow() {
+        print("keyboardShow")
+    }
+    @objc func keyboardHide() {
+        print("keyboardHide")
+    }
+    
     
     func registerCell() {
         tableView.register(WelcomeTableViewCell.nib, forCellReuseIdentifier: WelcomeTableViewCell.identifier)
@@ -28,32 +40,29 @@ class MainScreen: UITableViewController {
         tableView.register(OrTableViewCell.nib, forCellReuseIdentifier:  OrTableViewCell.identifier)
         tableView.register(EmailPasswordTableViewCell.nib, forCellReuseIdentifier: EmailPasswordTableViewCell.identifier)
         tableView.register(ForgottenTableViewCell.nib, forCellReuseIdentifier: ForgottenTableViewCell.identifier)
-
-        
-    }
+      }
     
     func setupNavigationItem() {
-   //     self.navigationController?.navigationBar.barTintColor  = #colorLiteral(red: 0.1221473739, green: 0.5271351933, blue: 0.5886865258, alpha: 1)
-        self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 0.01049180888, green: 0.6962119937, blue: 0.5805589557, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor  = #colorLiteral(red: 0.01049180888, green: 0.6962119937, blue: 0.5805589557, alpha: 1)
+        //   self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 0.01049180888, green: 0.6962119937, blue: 0.5805589557, alpha: 1)
         
         let loginButton = UIButton(type: .system)
-        loginButton.setBackgroundImage(UIImage(named: "login"), for: .normal)
-      //  loginButton.frame = CGRect(x: 0, y: 0, width: 30, height: 100)
+        loginButton.setTitle("  LOGIN  ", for: .normal)
+        loginButton.layer.borderWidth = 1
+        loginButton.tintColor = .white
+        loginButton.alpha = 0.5
+        loginButton.layer.borderColor = loginButton.tintColor.cgColor
+        loginButton.layer.cornerRadius = 2
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: loginButton)
+        
         let backButton = UIButton(type: .system)
-        
         backButton.setBackgroundImage(UIImage(named: "back"), for: .normal)
-      //  backButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
-        
-        
-        
     }
     
-
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 6
     }
     
@@ -72,7 +81,6 @@ class MainScreen: UITableViewController {
         return cell
             
         case 1: let cell = tableView.dequeueReusableCell(withIdentifier: LoginFacebookTableViewCell.identifier, for: indexPath) as! LoginFacebookTableViewCell
-      //  cell.loginButton.setImage(UIImage(named: "faceBook"), for: .normal)
         return cell
             
         case 2: let cell = tableView.dequeueReusableCell(withIdentifier: OrTableViewCell.identifier, for: indexPath) as! OrTableViewCell
@@ -82,15 +90,13 @@ class MainScreen: UITableViewController {
         cell.textFieldLogin.isEnabled = false
         cell.textFieldLogin.isHidden = true
         cell.imageViewPassword.isHidden = true
-        
         cell.textFieldEmail.placeholder = "Email"
         return cell
             
         case 4: let cell = tableView.dequeueReusableCell(withIdentifier: EmailPasswordTableViewCell.identifier, for: indexPath) as! EmailPasswordTableViewCell
-        cell.textFieldLogin.isEnabled = true
-        cell.textFieldLogin.isHidden = false
+        cell.textFieldEmail.isEnabled = false
+        cell.textFieldEmail.isHidden = true
         cell.imageViewEmail.isHidden = true
-        
         cell.textFieldLogin.placeholder = "Password"
         return cell
             

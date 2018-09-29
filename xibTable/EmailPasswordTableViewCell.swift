@@ -12,8 +12,12 @@ class EmailPasswordTableViewCell: UITableViewCell {
     @IBOutlet weak var imageViewPassword: UIImageView!
     @IBOutlet weak var imageViewEmail: UIImageView!
     
-    @IBOutlet weak var textFieldEmail: UITextField!
-    @IBOutlet weak var textFieldLogin: UITextField!
+    @IBOutlet weak var textFieldEmail: UITextField! {
+        didSet{   textFieldEmail.delegate = self}
+    }
+    @IBOutlet weak var textFieldLogin: UITextField! {
+        didSet {textFieldLogin.delegate = self }
+    }
     
     static var nib : UINib {
         return UINib(nibName: identifier, bundle: nil)
@@ -23,18 +27,7 @@ class EmailPasswordTableViewCell: UITableViewCell {
         return String(describing: self)
     }
     
-//    NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
-//    NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
-//
-    
-    //MARK:- future cods
-//    @objc func keyboardShow() {
-//        print("keyboardShow")
-//    }
-//    @objc func keyboardHide() {
-//        print("keyboardHide")
-//    }
-    
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -49,7 +42,8 @@ class EmailPasswordTableViewCell: UITableViewCell {
  
     //  hide keyboard when tapped not textField
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //textField.resignFirstResponder()
+        textFieldEmail.resignFirstResponder()
+        textFieldLogin.resignFirstResponder()
         print("touch onother")
     }
     

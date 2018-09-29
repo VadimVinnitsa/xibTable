@@ -21,11 +21,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5y-T5-Vdg">
-                        <rect key="frame" x="38.5" y="12" width="306" height="92"/>
-                        <state key="normal" title="fgdfgdf">
-                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </state>
-                        <state key="highlighted" title="54"/>
+                        <rect key="frame" x="38.5" y="12.5" width="306" height="92"/>
+                        <color key="backgroundColor" red="0.12214737389999999" green="0.52713519330000003" blue="0.58868652580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" title="" image="faceBook"/>
                         <connections>
                             <action selector="loginPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jHf-t4-ADz"/>
                         </connections>
@@ -43,7 +41,10 @@
             <connections>
                 <outlet property="loginButton" destination="m5y-T5-Vdg" id="ERC-Rs-FcM"/>
             </connections>
-            <point key="canvasLocation" x="-49" y="-175"/>
+            <point key="canvasLocation" x="-233" y="-213"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="faceBook" width="542" height="95"/>
+    </resources>
 </document>

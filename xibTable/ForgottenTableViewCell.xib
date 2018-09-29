@@ -20,26 +20,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="180.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTK-vC-qqj">
-                        <rect key="frame" x="96.5" y="20" width="128" height="41"/>
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                        <state key="normal" image="forgotten">
-                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="POl-I4-174">
+                        <rect key="frame" x="64" y="20" width="192" height="30"/>
+                        <state key="normal">
+                            <attributedString key="attributedTitle">
+                                <fragment content="Forgotten Password?">
+                                    <attributes>
+                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="15" name=".AppleSystemUIFont"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        <integer key="NSUnderline" value="1"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                         </state>
                     </button>
                 </subviews>
                 <color key="backgroundColor" red="0.01049180888" green="0.69621199369999998" blue="0.58055895570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="fTK-vC-qqj" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="hsD-y8-nlV"/>
-                    <constraint firstItem="fTK-vC-qqj" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="kBI-FU-6j7"/>
-                    <constraint firstItem="fTK-vC-qqj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="ldg-Bd-5qv"/>
+                    <constraint firstItem="POl-I4-174" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="0Pf-Fe-KPi"/>
+                    <constraint firstItem="POl-I4-174" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Uq6-We-iwD"/>
+                    <constraint firstItem="POl-I4-174" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.6" id="ule-VO-FwY"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <point key="canvasLocation" x="-74" y="-21.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="forgotten" width="261" height="41"/>
-    </resources>
 </document>
