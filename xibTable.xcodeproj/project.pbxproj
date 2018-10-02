@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843AEEDB2163BF520036B631 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AEEDA2163BF520036B631 /* CustomTextField.swift */; };
 		8459A79D215D1398009F8235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A79C215D1398009F8235 /* AppDelegate.swift */; };
 		8459A7A2215D1398009F8235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8459A7A0215D1398009F8235 /* Main.storyboard */; };
 		8459A7A4215D13AB009F8235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8459A7A3215D13AB009F8235 /* Assets.xcassets */; };
 		8459A7A7215D13AB009F8235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8459A7A5215D13AB009F8235 /* LaunchScreen.storyboard */; };
-		8459A7AF215D144F009F8235 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A7AE215D144F009F8235 /* MainScreen.swift */; };
+		8459A7AF215D144F009F8235 /* MainScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A7AE215D144F009F8235 /* MainScreenTableViewController.swift */; };
 		8459A7B2215D1C26009F8235 /* WelcomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A7B0215D1C25009F8235 /* WelcomeTableViewCell.swift */; };
 		8459A7B3215D1C26009F8235 /* WelcomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8459A7B1215D1C26009F8235 /* WelcomeTableViewCell.xib */; };
 		8459A7B6215D1F26009F8235 /* LoginFacebookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A7B4215D1F26009F8235 /* LoginFacebookTableViewCell.swift */; };
 		8459A7B7215D1F26009F8235 /* LoginFacebookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8459A7B5215D1F26009F8235 /* LoginFacebookTableViewCell.xib */; };
-		8459A7BE215D26FF009F8235 /* EmailPasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A7BC215D26FF009F8235 /* EmailPasswordTableViewCell.swift */; };
-		8459A7BF215D26FF009F8235 /* EmailPasswordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8459A7BD215D26FF009F8235 /* EmailPasswordTableViewCell.xib */; };
+		8459A7BE215D26FF009F8235 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A7BC215D26FF009F8235 /* TextFieldTableViewCell.swift */; };
+		8459A7BF215D26FF009F8235 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8459A7BD215D26FF009F8235 /* TextFieldTableViewCell.xib */; };
 		8459A7CA215D5645009F8235 /* OrTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A7C8215D5645009F8235 /* OrTableViewCell.swift */; };
 		8459A7CB215D5645009F8235 /* OrTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8459A7C9215D5645009F8235 /* OrTableViewCell.xib */; };
 		8459A7CE215D5818009F8235 /* ForgottenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A7CC215D5818009F8235 /* ForgottenTableViewCell.swift */; };
@@ -25,19 +26,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		843AEEDA2163BF520036B631 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8459A799215D1398009F8235 /* xibTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xibTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8459A79C215D1398009F8235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8459A7A1215D1398009F8235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8459A7A3215D13AB009F8235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8459A7A6215D13AB009F8235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8459A7A8215D13AB009F8235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8459A7AE215D144F009F8235 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		8459A7AE215D144F009F8235 /* MainScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewController.swift; sourceTree = "<group>"; };
 		8459A7B0215D1C25009F8235 /* WelcomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTableViewCell.swift; sourceTree = "<group>"; };
 		8459A7B1215D1C26009F8235 /* WelcomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeTableViewCell.xib; sourceTree = "<group>"; };
 		8459A7B4215D1F26009F8235 /* LoginFacebookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFacebookTableViewCell.swift; sourceTree = "<group>"; };
 		8459A7B5215D1F26009F8235 /* LoginFacebookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginFacebookTableViewCell.xib; sourceTree = "<group>"; };
-		8459A7BC215D26FF009F8235 /* EmailPasswordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPasswordTableViewCell.swift; sourceTree = "<group>"; };
-		8459A7BD215D26FF009F8235 /* EmailPasswordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailPasswordTableViewCell.xib; sourceTree = "<group>"; };
+		8459A7BC215D26FF009F8235 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		8459A7BD215D26FF009F8235 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		8459A7C8215D5645009F8235 /* OrTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrTableViewCell.swift; sourceTree = "<group>"; };
 		8459A7C9215D5645009F8235 /* OrTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrTableViewCell.xib; sourceTree = "<group>"; };
 		8459A7CC215D5818009F8235 /* ForgottenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenTableViewCell.swift; sourceTree = "<group>"; };
@@ -76,9 +78,10 @@
 			children = (
 				8459A79C215D1398009F8235 /* AppDelegate.swift */,
 				8459A7A0215D1398009F8235 /* Main.storyboard */,
-				8459A7AE215D144F009F8235 /* MainScreen.swift */,
-				8459A7BC215D26FF009F8235 /* EmailPasswordTableViewCell.swift */,
-				8459A7BD215D26FF009F8235 /* EmailPasswordTableViewCell.xib */,
+				8459A7AE215D144F009F8235 /* MainScreenTableViewController.swift */,
+				8459A7BC215D26FF009F8235 /* TextFieldTableViewCell.swift */,
+				843AEEDA2163BF520036B631 /* CustomTextField.swift */,
+				8459A7BD215D26FF009F8235 /* TextFieldTableViewCell.xib */,
 				8459A7B0215D1C25009F8235 /* WelcomeTableViewCell.swift */,
 				8459A7B1215D1C26009F8235 /* WelcomeTableViewCell.xib */,
 				8459A7C8215D5645009F8235 /* OrTableViewCell.swift */,
@@ -153,7 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8459A7B3215D1C26009F8235 /* WelcomeTableViewCell.xib in Resources */,
-				8459A7BF215D26FF009F8235 /* EmailPasswordTableViewCell.xib in Resources */,
+				8459A7BF215D26FF009F8235 /* TextFieldTableViewCell.xib in Resources */,
 				8459A7A7215D13AB009F8235 /* LaunchScreen.storyboard in Resources */,
 				8459A7B7215D1F26009F8235 /* LoginFacebookTableViewCell.xib in Resources */,
 				8459A7A4215D13AB009F8235 /* Assets.xcassets in Resources */,
@@ -170,8 +173,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8459A7BE215D26FF009F8235 /* EmailPasswordTableViewCell.swift in Sources */,
-				8459A7AF215D144F009F8235 /* MainScreen.swift in Sources */,
+				8459A7BE215D26FF009F8235 /* TextFieldTableViewCell.swift in Sources */,
+				843AEEDB2163BF520036B631 /* CustomTextField.swift in Sources */,
+				8459A7AF215D144F009F8235 /* MainScreenTableViewController.swift in Sources */,
 				8459A7B2215D1C26009F8235 /* WelcomeTableViewCell.swift in Sources */,
 				8459A7CE215D5818009F8235 /* ForgottenTableViewCell.swift in Sources */,
 				8459A7B6215D1F26009F8235 /* LoginFacebookTableViewCell.swift in Sources */,

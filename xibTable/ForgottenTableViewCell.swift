@@ -9,15 +9,7 @@
 import UIKit
 
 class ForgottenTableViewCell: UITableViewCell {
-    static var nib : UINib {
-        return UINib(nibName: identifier, bundle: nil)
-    }
-    
-    static var identifier : String {
-        return String(describing: self)
-    }
-    
-    
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

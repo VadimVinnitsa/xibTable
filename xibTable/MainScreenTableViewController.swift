@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainScreen: UITableViewController {
+class MainScreenTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class MainScreen: UITableViewController {
         tableView.register(WelcomeTableViewCell.nib, forCellReuseIdentifier: WelcomeTableViewCell.identifier)
         tableView.register(LoginFacebookTableViewCell.nib, forCellReuseIdentifier: LoginFacebookTableViewCell.identifier)
         tableView.register(OrTableViewCell.nib, forCellReuseIdentifier:  OrTableViewCell.identifier)
-        tableView.register(EmailPasswordTableViewCell.nib, forCellReuseIdentifier: EmailPasswordTableViewCell.identifier)
+        tableView.register(TextFieldTableViewCell.nib, forCellReuseIdentifier: TextFieldTableViewCell.identifier)
         tableView.register(ForgottenTableViewCell.nib, forCellReuseIdentifier: ForgottenTableViewCell.identifier)
       }
     
@@ -47,7 +47,7 @@ class MainScreen: UITableViewController {
         //   self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 0.01049180888, green: 0.6962119937, blue: 0.5805589557, alpha: 1)
         
         let loginButton = UIButton(type: .system)
-        loginButton.setTitle("  LOGIN  ", for: .normal)
+        loginButton.setTitle("LOGIN", for: .normal)
         loginButton.layer.borderWidth = 1
         loginButton.tintColor = .white
         loginButton.alpha = 0.5
@@ -86,20 +86,22 @@ class MainScreen: UITableViewController {
         case 2: let cell = tableView.dequeueReusableCell(withIdentifier: OrTableViewCell.identifier, for: indexPath) as! OrTableViewCell
         return cell
             
-        case 3: let cell = tableView.dequeueReusableCell(withIdentifier: EmailPasswordTableViewCell.identifier, for: indexPath) as! EmailPasswordTableViewCell
-        cell.textFieldLogin.isEnabled = false
-        cell.textFieldLogin.isHidden = true
-        cell.imageViewPassword.isHidden = true
-        cell.textFieldEmail.placeholder = "Email"
-        return cell
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.identifier, for: indexPath) as! TextFieldTableViewCell
+            cell.textField.addLeftImage(image: UIImage(named: "email")!)
+            cell.textField.leftViewRect(forBounds: CGRect(x: 20, y: 20, width: 50, height: 50))
+            cell.textField.placeholder = "email"
+//            let cell = Bundle.main.loadNibNamed("TextFieldTableViewCell", owner: self, options: nil)?.first as! TextFieldTableViewCell
             
-        case 4: let cell = tableView.dequeueReusableCell(withIdentifier: EmailPasswordTableViewCell.identifier, for: indexPath) as! EmailPasswordTableViewCell
-        cell.textFieldEmail.isEnabled = false
-        cell.textFieldEmail.isHidden = true
-        cell.imageViewEmail.isHidden = true
-        cell.textFieldLogin.placeholder = "Password"
+       //cell.lableChenge(lbl: .welcomeLbl)
         return cell
-            
+
+        case 4: let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.identifier, for: indexPath) as! TextFieldTableViewCell
+        cell.textField.addLeftImage(image: UIImage(named: "password")!)
+        cell.textField.leftViewRect(forBounds: CGRect(x: 0, y: 0, width: 100, height: 100))
+        cell.textField.placeholder = "password"
+        return cell
+
         case 5: let cell = tableView.dequeueReusableCell(withIdentifier: ForgottenTableViewCell.identifier, for: indexPath) as! ForgottenTableViewCell
         return cell
         default:

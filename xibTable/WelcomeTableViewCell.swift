@@ -10,16 +10,6 @@ import UIKit
 
 class WelcomeTableViewCell: UITableViewCell {
   
-    static var nib : UINib {
-        return UINib(nibName: identifier, bundle: nil)
-    }
-    
-    static var identifier : String {
-        return String(describing: self)
-    }
-    
-    
-   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,6 +19,17 @@ class WelcomeTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+}
+
+extension UITableViewCell {
+    static var nib : UINib {
+        return UINib(nibName: identifier, bundle: nil)
+    }
+    
+    static var identifier : String {
+        return String(describing: self)
     }
     
 }

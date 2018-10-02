@@ -12,16 +12,7 @@ class LoginFacebookTableViewCell: UITableViewCell {
 
     @IBOutlet weak var loginButton: UIButton!
    
-    static var nib : UINib {
-        return UINib(nibName: identifier, bundle: nil)
-    }
-    
-    static var identifier : String {
-        return String(describing: self)
-    }
-    
-    
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

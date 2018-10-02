@@ -8,26 +8,16 @@
 
 import UIKit
 
-class EmailPasswordTableViewCell: UITableViewCell {
-    @IBOutlet weak var imageViewPassword: UIImageView!
-    @IBOutlet weak var imageViewEmail: UIImageView!
+class TextFieldTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var textFieldEmail: UITextField! {
-        didSet{   textFieldEmail.delegate = self}
-    }
-    @IBOutlet weak var textFieldLogin: UITextField! {
-        didSet {textFieldLogin.delegate = self }
+    @IBOutlet weak var textField: CustomTextField! {
+        didSet {
+            textField.delegate = self
+        }
     }
     
-    static var nib : UINib {
-        return UINib(nibName: identifier, bundle: nil)
-    }
+ 
     
-    static var identifier : String {
-        return String(describing: self)
-    }
-    
-
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,16 +32,23 @@ class EmailPasswordTableViewCell: UITableViewCell {
  
     //  hide keyboard when tapped not textField
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        textFieldEmail.resignFirstResponder()
-        textFieldLogin.resignFirstResponder()
+//        textFieldEmail.resignFirstResponder()
+//        textFieldLogin.resignFirstResponder()
+        textField.resignFirstResponder()
+        
+//        if touches.first != nil {
+//            contentView.endEditing(true)
+//        }
+//        super.touchesBegan(touches, with: event)
+//
         print("touch onother")
     }
-    
+
     
 }
 
 
-extension EmailPasswordTableViewCell: UITextFieldDelegate {
+extension TextFieldTableViewCell: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.resignFirstResponder()
