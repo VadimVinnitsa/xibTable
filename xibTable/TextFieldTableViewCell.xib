@@ -24,6 +24,9 @@
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="didEndEditing:" destination="KGk-i7-Jjw" eventType="editingDidEndOnExit" id="5fk-HT-hh9"/>
+                        </connections>
                     </textField>
                 </subviews>
                 <color key="backgroundColor" red="0.01049180888" green="0.69621199369999998" blue="0.58055895570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

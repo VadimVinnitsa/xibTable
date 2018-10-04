@@ -27,7 +27,7 @@ class LoginFacebookTableViewCell: UITableViewCell {
     
     
     @IBAction func loginPressed(_ sender: UIButton) {
-        print("loginPressed")
+      //  print("loginPressed")
     }
     
    

@@ -10,20 +10,12 @@ import UIKit
 
 class TextFieldTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var textField: CustomTextField! {
-        didSet {
-            textField.delegate = self
-        }
-    }
-    
- 
-    
+    @IBOutlet weak var textField: CustomTextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        textField.endEditing(true)
-        contentView.endEditing(true)
+       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,37 +24,12 @@ class TextFieldTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
  
-    //  hide keyboard when tapped not textField
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        textFieldEmail.resignFirstResponder()
-//        textFieldLogin.resignFirstResponder()
-        textField.resignFirstResponder()
-        
-//        if touches.first != nil {
-//            contentView.endEditing(true)
-//        }
-//        super.touchesBegan(touches, with: event)
-//
-        print("touch onother")
+    @IBAction func didEndEditing(_ sender: CustomTextField) {
+        sender.resignFirstResponder()
     }
-
+    
     
 }
 
 
-extension TextFieldTableViewCell: UITextFieldDelegate {
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.resignFirstResponder()
-        print("end editing")
-    }
-    
-    //hide KeyBoard when pressed return
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        print("should return")
-        return true
-    }
-    
-}
 
