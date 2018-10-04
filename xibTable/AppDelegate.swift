@@ -18,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 //        let navigationBarAppearace = UINavigationBar.appearance()
 //        navigationBarAppearace.barTintColor = #colorLiteral(red: 0.01049180888, green: 0.6962119937, blue: 0.5805589557, alpha: 1)
+       window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        let vc = MainScreenTableViewController()
+        let nc = UINavigationController(rootViewController: vc)
+        window?.rootViewController = nc
         UINavigationBar.appearance().backgroundColor = #colorLiteral(red: 0.01049180888, green: 0.6962119937, blue: 0.5805589557, alpha: 1)
         
         

@@ -53,6 +53,7 @@ class MainScreenTableViewController: UITableViewController {
         loginButton.alpha = 0.5
         loginButton.layer.borderColor = loginButton.tintColor.cgColor
         loginButton.layer.cornerRadius = 2
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: loginButton)
         
         let backButton = UIButton(type: .system)
@@ -90,7 +91,7 @@ class MainScreenTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.identifier, for: indexPath) as! TextFieldTableViewCell
             cell.textField.addLeftImage(image: UIImage(named: "email")!)
             cell.textField.leftViewRect(forBounds: CGRect(x: 20, y: 20, width: 50, height: 50))
-            cell.textField.placeholder = "email"
+            cell.textField.placeholder = "Email"
 //            let cell = Bundle.main.loadNibNamed("TextFieldTableViewCell", owner: self, options: nil)?.first as! TextFieldTableViewCell
             
        //cell.lableChenge(lbl: .welcomeLbl)
@@ -99,7 +100,7 @@ class MainScreenTableViewController: UITableViewController {
         case 4: let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.identifier, for: indexPath) as! TextFieldTableViewCell
         cell.textField.addLeftImage(image: UIImage(named: "password")!)
         cell.textField.leftViewRect(forBounds: CGRect(x: 0, y: 0, width: 100, height: 100))
-        cell.textField.placeholder = "password"
+        cell.textField.placeholder = "Password"
         return cell
 
         case 5: let cell = tableView.dequeueReusableCell(withIdentifier: ForgottenTableViewCell.identifier, for: indexPath) as! ForgottenTableViewCell
